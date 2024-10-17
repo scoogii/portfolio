@@ -7,7 +7,7 @@ const Nav = () => {
     justifyContent: "center",
     alignItems: "center",
     width: "100vw",
-    height: { xs: "80px" },
+    height: "70px",
     background: "#2b3c5e",
     borderBottom: "5px solid #1a2438",
     position: "fixed",

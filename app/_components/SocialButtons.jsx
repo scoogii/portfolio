@@ -13,6 +13,7 @@ const SocialButtons = () => {
     alignItems: "center",
     gap: { xs: "15px", sm: "20px", md: "25px", lg: "30px" },
   };
+
   const socialButtonStyle = {
     background: "#2b3c5e",
     ":hover": {
