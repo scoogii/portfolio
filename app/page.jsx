@@ -17,8 +17,19 @@ export default function Home() {
     <main className={styles.main}>
       <Nav />
       <Box sx={introCardStyle}>
-        <h1>Hi! I&apos;m Christian 👋</h1>
-        <h3>Expert mestake maker. Black belt in Google.</h3>
+        <div
+          style={{
+            clear: "both",
+            display: "flex",
+            gap: "15px",
+          }}
+        >
+          <h1 style={{ float: "left" }}>Hi! I&apos;m Christian</h1>
+          <h1 className={styles.rotate} style={{ float: "right" }}>
+            👋
+          </h1>
+        </div>
+        <h3>Hobby mestake maker. Black belt in Google.</h3>
         <h4 style={{ fontStyle: "italic" }}>
           &quot;If you don&apos;t have any problems, make your own!&quot;
         </h4>

@@ -7,3 +7,19 @@
   min-height: 100vh;
   gap: 4vh;
 }
+
+.rotate {
+  animation: rotation 3s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

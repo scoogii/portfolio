@@ -1,4 +1,5 @@
 import { Box, Button } from "@mui/joy";
+import Link from "next/link";
 
 const Nav = () => {
   const navStyle = {
@@ -26,9 +27,12 @@ const Nav = () => {
 
   return (
     <Box sx={navStyle}>
-      <Button sx={navButtonStyle}>About Me</Button>
-      <Button sx={navButtonStyle}>My Projects</Button>
-      <Button sx={navButtonStyle}>Misc</Button>
+      <Button sx={navButtonStyle} href="/projects" component={Link}>
+        My Projects
+      </Button>
+      <Button sx={navButtonStyle} href="/misc" component={Link}>
+        Misc
+      </Button>
     </Box>
   );
 };
