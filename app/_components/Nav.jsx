@@ -1,11 +1,12 @@
 import { Box, Button } from "@mui/joy";
 import Link from "next/link";
+import HomeIcon from "@mui/icons-material/Home";
 
 const Nav = () => {
   const navStyle = {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "left",
     alignItems: "center",
     width: "100vw",
     height: "70px",
@@ -15,6 +16,7 @@ const Nav = () => {
     top: 0,
     padding: "30px",
     gap: { lg: "30px" },
+    zIndex: 100,
   };
 
   const navButtonStyle = {
@@ -27,6 +29,9 @@ const Nav = () => {
 
   return (
     <Box sx={navStyle}>
+      <Button sx={navButtonStyle} href="/" component={Link}>
+        <HomeIcon />
+      </Button>
       <Button sx={navButtonStyle} href="/projects" component={Link}>
         My Projects
       </Button>
