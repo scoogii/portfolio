@@ -40,7 +40,13 @@ export default function Home() {
           <h1 style={{ float: "left" }}>
             Hi! I&apos;m{" "}
             <Tooltip title="Download my resume!" arrow sx={{ font: "inherit" }}>
-              <Button sx={nameButtonStyle} href="/" component={Link}>
+              <Button
+                sx={nameButtonStyle}
+                type="application/pdf"
+                href="/Christian.pdf"
+                target="_blank"
+                component={Link}
+              >
                 Christian
               </Button>
             </Tooltip>
