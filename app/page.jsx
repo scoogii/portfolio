@@ -57,7 +57,7 @@ export default function Home() {
         </div>
         <h3>Hobby mestake maker. Black belt in Google.</h3>
         <h4 style={{ fontStyle: "italic" }}>
-          &quot;If you don&apos;t have any problems, make your own!&quot;
+          &quot;If you don&apos;t have any problems, make your own.&quot;
         </h4>
       </Box>
       <SocialButtons />

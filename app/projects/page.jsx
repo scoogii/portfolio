@@ -1,33 +1,39 @@
-import { Box } from "@mui/joy";
+import { Box, Grid } from "@mui/joy";
 import Nav from "../_components/Nav";
+import ProjectCard from "../_components/ProjectCard";
 
-const projects = {
-  NBAdle: {
+const projects = [
+  {
+    name: "NBAdle",
     languages: ["Python", "JavaScript"],
     technologies: ["NextJS", "Flask"],
     description: "NBAdle",
   },
-  ColleX: {
+  {
+    name: "ColleX",
     languages: ["Python", "JavaScript"],
     technologies: ["NextJS", "Flask", "PostgreSQL", "Docker"],
     description: "ColleX",
   },
-  LoopMania: {
+  {
+    name: "LoopMania",
     languages: ["Java"],
     technologies: ["JUnit"],
     description: "LoopMania",
   },
-  AirBrB: {
+  {
+    name: "AirBrb",
     languages: ["Javascript"],
     technologies: ["ReactJS"],
-    description: "AirBrB",
+    description: "AirBrb",
   },
-  Flockr: {
+  {
+    name: "Flockr",
     languages: ["Python"],
     technologies: ["Flask"],
     description: "Flockr",
   },
-};
+];
 
 const Projects = () => {
   const bodyStyle = {
@@ -52,27 +58,66 @@ const Projects = () => {
 
   const contentStyle = {
     display: "flex",
-    flexFlow: "column wrap",
+    flexDirection: "row",
     alignItems: "start",
-    justifyContent: "start",
+    justifyContent: "center",
     marginTop: "30px",
-    width: { xs: "300px", sm: "550px", md: "850px", lg: "950px" },
-    height: { xs: "400px", sm: "90%" },
+    width: { xs: "300px", sm: "570px", md: "860px", lg: "1100px" },
+    height: { xs: "400px", sm: "550px", md: "650px", lg: "695px" },
     border: "2px solid #2b3c5e",
     borderRadius: "14px",
     padding: "10px",
-    overflow: "scroll",
+    gap: "10px",
+    overflowY: "auto",
+    overflowX: "hidden",
   };
 
   return (
     <>
       <Box sx={bodyStyle}>
         <Nav />
+
         <Box sx={headingStyle}>
           <h1>Projects</h1>
         </Box>
 
-        <Box sx={contentStyle}>Hi</Box>
+        <Grid container sx={contentStyle}>
+          <ProjectCard
+            name="NBAdle"
+            image="nbadle_app.png"
+            languages="JavaScript"
+            technologies="NextJS"
+            description="Testing"
+          />
+          <ProjectCard
+            name="ColleX"
+            image="colleX_app.png"
+            languages="JavaScript"
+            technologies="NextJS"
+            description="Testing"
+          />
+          <ProjectCard
+            name="AirBrb"
+            image="airbrb_app.png"
+            languages="JavaScript"
+            technologies="NextJS"
+            description="Testing"
+          />
+          <ProjectCard
+            name="LoopMania"
+            image="loopmania_app.png"
+            languages="JavaScript"
+            technologies="NextJS"
+            description="Testing"
+          />
+          <ProjectCard
+            name="Flockr"
+            image="flockr_app.png"
+            languages="Python"
+            technologies="Flask"
+            description="Testing"
+          />
+        </Grid>
       </Box>
     </>
   );
