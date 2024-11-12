@@ -16,18 +16,19 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
   };
 
   const readButtonStyle = {
-    width: { xs: "180px", lg: "200px" },
+    width: { xs: "180px" },
     height: { xs: "50px", lg: "60px" },
+    fontSize: "12pt",
     background: "#2b3c5e",
     borderRadius: "10px",
     ":hover": {
       background: "#354a75",
-      transform: "scale(1.1)",
+      transform: "scale(1.05)",
     },
   };
 
   return (
-    <Box sx={cardStyle}>
+    <Box className={styles.projectBox} sx={cardStyle}>
       <h2>{name}</h2>
 
       <Divider sx={{ background: "#2b3c5e", margin: "10px 0 10px" }} />

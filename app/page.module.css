@@ -47,3 +47,14 @@
     content: "";
   }
 }
+
+.projectBox {
+  color: white;
+  background: #1c2230;
+  transition: 0.3s ease-in-out;
+}
+
+.projectBox:hover {
+  box-shadow: rgba(73, 88, 184, 0.2) 0px 5px;
+  transition: 0.1s ease-in-out;
+}
