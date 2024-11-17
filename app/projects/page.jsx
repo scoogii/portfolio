@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: "AirBrb",
-    languages: ["Javascript"],
+    languages: ["JavaScript"],
     technologies: ["ReactJS"],
     description: "AirBrb",
   },
@@ -82,41 +82,16 @@ const Projects = () => {
         </Box>
 
         <Grid container sx={contentStyle}>
-          <ProjectCard
-            name="NBAdle"
-            image="nbadle_app.png"
-            languages="JavaScript"
-            technologies="NextJS"
-            description="Testing"
-          />
-          <ProjectCard
-            name="ColleX"
-            image="colleX_app.png"
-            languages="JavaScript"
-            technologies="NextJS"
-            description="Testing"
-          />
-          <ProjectCard
-            name="AirBrb"
-            image="airbrb_app.png"
-            languages="JavaScript"
-            technologies="NextJS"
-            description="Testing"
-          />
-          <ProjectCard
-            name="LoopMania"
-            image="loopmania_app.png"
-            languages="JavaScript"
-            technologies="NextJS"
-            description="Testing"
-          />
-          <ProjectCard
-            name="Flockr"
-            image="flockr_app.png"
-            languages="Python"
-            technologies="Flask"
-            description="Testing"
-          />
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              name={project.name}
+              image={`${project.name}_app.png`}
+              languages={project.languages}
+              technologies={project.technologies}
+              description={project.description}
+            />
+          ))}
         </Grid>
       </Box>
     </>

@@ -25,6 +25,7 @@ const Nav = () => {
       background: "#354a75",
       transform: "scale(1.1)",
     },
+    font: "inherit",
   };
 
   return (

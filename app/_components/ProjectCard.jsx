@@ -1,4 +1,4 @@
-import { Box, Button, Divider } from "@mui/joy";
+import { Box, Chip, Divider } from "@mui/joy";
 import styles from "../page.module.css";
 
 const ProjectCard = ({ name, image, languages, technologies, description }) => {
@@ -15,16 +15,16 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
     padding: "10px",
   };
 
-  const readButtonStyle = {
-    width: { xs: "180px" },
-    height: { xs: "50px", lg: "60px" },
-    fontSize: "12pt",
-    background: "#2b3c5e",
-    borderRadius: "10px",
-    ":hover": {
-      background: "#354a75",
-      transform: "scale(1.05)",
-    },
+  const colours = {
+    Python: "#ffe15f",
+    JavaScript: "#f7e018",
+    NextJS: "#2a53a9",
+    ReactJS: "#58c4dc",
+    Flask: "#4cb1c3",
+    PostgreSQL: "#336791",
+    Docker: "#1d63ed",
+    Java: "#f0931c",
+    JUnit: "#c60000",
   };
 
   return (
@@ -47,14 +47,59 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "start",
           alignItems: "center",
-
           width: "100%",
           height: "100%",
+          padding: "10px",
         }}
       >
-        <Button sx={readButtonStyle}>Read More</Button>
+        {languages.concat(technologies).length > 2 && (
+          <Box className={styles.carousel}>
+            <Box className={styles.group}>
+              {languages.concat(technologies).map((tech, index) => (
+                <Chip
+                  key={index}
+                  sx={{
+                    bgcolor: colours[tech],
+                    color: "#161717",
+                    font: "inherit",
+                  }}
+                >
+                  {tech}
+                </Chip>
+              ))}
+            </Box>
+          </Box>
+        )}
+
+        {languages.concat(technologies).length <= 2 && (
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+              padding: "10px",
+            }}
+          >
+            {languages.concat(technologies).map((tech, index) => (
+              <Chip
+                key={index}
+                sx={{
+                  bgcolor: colours[tech],
+                  color: "#161717",
+                  font: "inherit",
+                }}
+              >
+                {tech}
+              </Chip>
+            ))}
+          </Box>
+        )}
+
+        <Box>{description}</Box>
       </Box>
     </Box>
   );

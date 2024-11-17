@@ -49,6 +49,8 @@
 }
 
 .projectBox {
+  position: relative;
+  top: 0;
   color: white;
   background: #1c2230;
   transition: 0.3s ease-in-out;
@@ -57,4 +59,44 @@
 .projectBox:hover {
   box-shadow: rgba(73, 88, 184, 0.2) 0px 5px;
   transition: 0.1s ease-in-out;
+  top: -5px;
+}
+
+.carousel {
+  width: 100%;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 5%,
+    #fff 95%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 5%,
+    #fff 95%,
+    transparent
+  );
+}
+
+.group {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  will-change: transform;
+  animation: scrolling 10s linear infinite;
+}
+
+.group:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
