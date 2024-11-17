@@ -7,31 +7,34 @@ const projects = [
     name: "NBAdle",
     languages: ["Python", "JavaScript"],
     technologies: ["NextJS", "Flask"],
-    description: "NBAdle",
+    description:
+      "NBA player guessing game similar to the likes of New York Times' Wordle.",
   },
   {
     name: "ColleX",
     languages: ["Python", "JavaScript"],
     technologies: ["NextJS", "Flask", "PostgreSQL", "Docker"],
-    description: "ColleX",
+    description: "Woolworths/Coles collectibles exchange and marketplace.",
   },
   {
     name: "LoopMania",
     languages: ["Java"],
     technologies: ["JUnit"],
-    description: "LoopMania",
+    description: "Clone of the popular game LoopHero.",
   },
   {
     name: "AirBrb",
     languages: ["JavaScript"],
     technologies: ["ReactJS"],
-    description: "AirBrb",
+    description:
+      "Platform for booking/hosting homestays and experiences similar to Airbnb.",
   },
   {
     name: "Flockr",
     languages: ["Python"],
-    technologies: ["Flask"],
-    description: "Flockr",
+    technologies: ["Flask", "pytest"],
+    description:
+      "Messaging and productivity platform based off of the Flock app.",
   },
 ];
 

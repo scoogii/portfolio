@@ -2,6 +2,19 @@ import { Box, Chip, Divider } from "@mui/joy";
 import styles from "../page.module.css";
 
 const ProjectCard = ({ name, image, languages, technologies, description }) => {
+  const colours = {
+    Python: "#ffe15f",
+    JavaScript: "#f7e018",
+    NextJS: "#2a53a9",
+    ReactJS: "#58c4dc",
+    Flask: "#4cb1c3",
+    PostgreSQL: "#336791",
+    Docker: "#1d63ed",
+    Java: "#f0931c",
+    JUnit: "#c60000",
+    pytest: "#08a2e4",
+  };
+
   const cardStyle = {
     display: "flex",
     flexDirection: "column",
@@ -15,16 +28,21 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
     padding: "10px",
   };
 
-  const colours = {
-    Python: "#ffe15f",
-    JavaScript: "#f7e018",
-    NextJS: "#2a53a9",
-    ReactJS: "#58c4dc",
-    Flask: "#4cb1c3",
-    PostgreSQL: "#336791",
-    Docker: "#1d63ed",
-    Java: "#f0931c",
-    JUnit: "#c60000",
+  const descriptionStyle = {
+    display: { xs: "inline-block", md: "flex" },
+    flexDirection: { md: "column" },
+    justifyContent: { md: "center" },
+    alignItems: { md: "center" },
+    textAlign: "center",
+    width: { xs: "250px", lg: "270px" },
+    height: { xs: "55px", md: "70px", lg: "90px" },
+    overflow: { xs: "hidden", md: "auto" },
+    whiteSpace: { xs: "nowrap", md: "normal" },
+    textOverflow: "ellipsis",
+    border: "2px solid #2b3c5e",
+    borderRadius: "12px",
+    padding: { xs: "15px", md: "5px", lg: "10px" },
+    marginTop: "10px",
   };
 
   return (
@@ -56,7 +74,7 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
       >
         {languages.concat(technologies).length > 2 && (
           <Box className={styles.carousel}>
-            <Box className={styles.group}>
+            <div className={styles.group}>
               {languages.concat(technologies).map((tech, index) => (
                 <Chip
                   key={index}
@@ -69,7 +87,22 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
                   {tech}
                 </Chip>
               ))}
-            </Box>
+            </div>
+
+            <div aria-hidden className={styles.group}>
+              {languages.concat(technologies).map((tech, index) => (
+                <Chip
+                  key={index}
+                  sx={{
+                    bgcolor: colours[tech],
+                    color: "#161717",
+                    font: "inherit",
+                  }}
+                >
+                  {tech}
+                </Chip>
+              ))}
+            </div>
           </Box>
         )}
 
@@ -81,7 +114,6 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
               flexDirection: "row",
               justifyContent: "space-evenly",
               alignItems: "center",
-              padding: "10px",
             }}
           >
             {languages.concat(technologies).map((tech, index) => (
@@ -99,7 +131,7 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
           </Box>
         )}
 
-        <Box>{description}</Box>
+        <Box sx={descriptionStyle}>{description}</Box>
       </Box>
     </Box>
   );
