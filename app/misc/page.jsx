@@ -17,7 +17,7 @@ const Misc = () => {
       <main className={styles.main}>
         <Nav />
         <Box className={styles.loading} sx={tempStyle}>
-          WIP
+          WIP 🛠️
         </Box>
       </main>
     </>

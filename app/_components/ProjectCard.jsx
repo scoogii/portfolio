@@ -1,7 +1,21 @@
-import { Box, Chip, Divider } from "@mui/joy";
-import styles from "../page.module.css";
+"use client";
 
-const ProjectCard = ({ name, image, languages, technologies, description }) => {
+import { Box, Button, Chip, Divider } from "@mui/joy";
+import styles from "../page.module.css";
+import { useState } from "react";
+import ProjectModal from "./ProjectModal";
+
+const ProjectCard = ({
+  name,
+  image,
+  languages,
+  technologies,
+  description,
+  longDescription,
+  link,
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const colours = {
     Python: "#ffe15f",
     JavaScript: "#f7e018",
@@ -26,6 +40,10 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
     background: "#1a2438",
     borderRadius: "14px",
     padding: "10px",
+    font: "inherit",
+    ":hover": {
+      background: "transparent",
+    },
   };
 
   const descriptionStyle = {
@@ -45,36 +63,99 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
     marginTop: "10px",
   };
 
+  const handleProjectClick = () => {
+    setIsOpen(true);
+  };
+
   return (
-    <Box className={styles.projectBox} sx={cardStyle}>
-      <h2>{name}</h2>
-
-      <Divider sx={{ background: "#2b3c5e", margin: "10px 0 10px" }} />
-
-      <Box
-        component="img"
-        src={image}
-        alt={image}
-        sx={{
-          width: { xs: "260px", sm: "240px", md: "250px", lg: "285px" },
-          borderRadius: "12px",
-        }}
+    <>
+      <ProjectModal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        name={name}
+        image={image}
+        languages={languages}
+        technologies={technologies}
+        description={description}
+        longDescription={longDescription}
+        link={link}
       />
-
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "start",
-          alignItems: "center",
-          width: "100%",
-          height: "100%",
-          padding: "10px",
+      <Button
+        className={styles.projectBox}
+        sx={cardStyle}
+        onClick={() => {
+          handleProjectClick();
         }}
       >
-        {languages.concat(technologies).length > 2 && (
-          <Box className={styles.carousel}>
-            <div className={styles.group}>
+        <h2>{name}</h2>
+
+        <Divider sx={{ background: "#2b3c5e", margin: "10px 0 10px" }} />
+
+        <Box
+          component="img"
+          src={image}
+          alt={image}
+          sx={{
+            width: { xs: "260px", sm: "240px", md: "250px", lg: "285px" },
+            borderRadius: "12px",
+          }}
+        />
+
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "start",
+            alignItems: "center",
+            width: "100%",
+            height: "100%",
+            padding: "10px",
+          }}
+        >
+          {languages.concat(technologies).length > 2 && (
+            <Box className={styles.carousel}>
+              <div className={styles.group}>
+                {languages.concat(technologies).map((tech, index) => (
+                  <Chip
+                    key={index}
+                    sx={{
+                      bgcolor: colours[tech],
+                      color: "#161717",
+                      font: "inherit",
+                    }}
+                  >
+                    {tech}
+                  </Chip>
+                ))}
+              </div>
+
+              <div aria-hidden className={styles.group}>
+                {languages.concat(technologies).map((tech, index) => (
+                  <Chip
+                    key={index}
+                    sx={{
+                      bgcolor: colours[tech],
+                      color: "#161717",
+                      font: "inherit",
+                    }}
+                  >
+                    {tech}
+                  </Chip>
+                ))}
+              </div>
+            </Box>
+          )}
+
+          {languages.concat(technologies).length <= 2 && (
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-evenly",
+                alignItems: "center",
+              }}
+            >
               {languages.concat(technologies).map((tech, index) => (
                 <Chip
                   key={index}
@@ -87,53 +168,13 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
                   {tech}
                 </Chip>
               ))}
-            </div>
+            </Box>
+          )}
 
-            <div aria-hidden className={styles.group}>
-              {languages.concat(technologies).map((tech, index) => (
-                <Chip
-                  key={index}
-                  sx={{
-                    bgcolor: colours[tech],
-                    color: "#161717",
-                    font: "inherit",
-                  }}
-                >
-                  {tech}
-                </Chip>
-              ))}
-            </div>
-          </Box>
-        )}
-
-        {languages.concat(technologies).length <= 2 && (
-          <Box
-            sx={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-            }}
-          >
-            {languages.concat(technologies).map((tech, index) => (
-              <Chip
-                key={index}
-                sx={{
-                  bgcolor: colours[tech],
-                  color: "#161717",
-                  font: "inherit",
-                }}
-              >
-                {tech}
-              </Chip>
-            ))}
-          </Box>
-        )}
-
-        <Box sx={descriptionStyle}>{description}</Box>
-      </Box>
-    </Box>
+          <Box sx={descriptionStyle}>{description}</Box>
+        </Box>
+      </Button>
+    </>
   );
 };
 

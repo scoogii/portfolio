@@ -9,18 +9,24 @@ const projects = [
     technologies: ["NextJS", "Flask"],
     description:
       "NBA player guessing game similar to the likes of New York Times' Wordle.",
+    longDescription: "asdhaksdhjahdskahdhdakshjdkhakdhda",
+    link: "https://www.nbadle.com/",
   },
   {
     name: "ColleX",
     languages: ["Python", "JavaScript"],
     technologies: ["NextJS", "Flask", "PostgreSQL", "Docker"],
     description: "Woolworths/Coles collectibles exchange and marketplace.",
+    longDescription: "asdhaksdhjahdskahdhdakshjdkhakdhda",
+    link: "https://github.com/scoogii/collex",
   },
   {
     name: "LoopMania",
     languages: ["Java"],
     technologies: ["JUnit"],
     description: "Clone of the popular game LoopHero.",
+    longDescription: "asdhaksdhjahdskahdhdakshjdkhakdhda",
+    link: "",
   },
   {
     name: "AirBrb",
@@ -28,6 +34,8 @@ const projects = [
     technologies: ["ReactJS"],
     description:
       "Platform for booking/hosting homestays and experiences similar to Airbnb.",
+    longDescription: "asdhaksdhjahdskahdhdakshjdkhakdhda",
+    link: "https://github.com/scoogii/airbrb",
   },
   {
     name: "Flockr",
@@ -35,6 +43,8 @@ const projects = [
     technologies: ["Flask", "pytest"],
     description:
       "Messaging and productivity platform based off of the Flock app.",
+    longDescription: "asdhaksdhjahdskahdhdakshjdkhakdhda",
+    link: "https://github.com/scoogii/flockr",
   },
 ];
 
@@ -93,6 +103,8 @@ const Projects = () => {
               languages={project.languages}
               technologies={project.technologies}
               description={project.description}
+              longDescription={project.longDescription}
+              link={project.link}
             />
           ))}
         </Grid>
