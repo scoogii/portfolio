@@ -54,7 +54,7 @@ const ProjectCard = ({ name, image, languages, technologies, description }) => {
       <Box
         component="img"
         src={image}
-        alt="project image"
+        alt={image}
         sx={{
           width: { xs: "260px", sm: "240px", md: "250px", lg: "285px" },
           borderRadius: "12px",

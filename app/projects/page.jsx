@@ -89,7 +89,7 @@ const Projects = () => {
             <ProjectCard
               key={index}
               name={project.name}
-              image={`/public/${project.name}_app.png`}
+              image={`/images/${project.name}_app.png`}
               languages={project.languages}
               technologies={project.technologies}
               description={project.description}
