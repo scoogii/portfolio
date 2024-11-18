@@ -8,7 +8,8 @@ html,
 body {
   background: #141a27;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 70px);
+  max-height: 100vh;
 }
 
 a {

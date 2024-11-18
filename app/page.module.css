@@ -64,6 +64,7 @@
 
 .carousel {
   display: flex;
+  overflow: hidden;
   width: 100%;
   -webkit-mask-image: linear-gradient(
     90deg,

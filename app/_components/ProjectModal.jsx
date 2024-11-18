@@ -28,9 +28,9 @@ const ProjectModal = ({
     alignItems: "center",
     width: { xs: "300px", sm: "500px", md: "700px", lg: "800px" },
     height: { xs: "500px", sm: "600px", md: "700px", lg: "700px" },
-    padding: "20px",
-    background: "#1a2438",
-    border: "2px solid #2b3c5e",
+    padding: { xs: "50px 10px 50px", lg: "50px 20px 50px" },
+    background: "#141a27",
+    border: "3px solid #2b3c5e",
     borderRadius: "12px",
     overflowX: "hidden",
     overflowY: "auto",
@@ -47,6 +47,7 @@ const ProjectModal = ({
       transform: "scale(1.05)",
     },
     width: "50px",
+    height: "20px",
   };
 
   return (
@@ -65,7 +66,7 @@ const ProjectModal = ({
             justifyContent: "center",
             alignItems: "center",
             gap: "10px",
-            margin: "-5px",
+            margin: "-10px",
           }}
         >
           <ModalClose size="lg" />
@@ -94,7 +95,6 @@ const ProjectModal = ({
           sx={{
             width: { xs: "250px", sm: "350px", md: "450px", lg: "500px" },
             borderRadius: "12px",
-            margin: "10px",
           }}
         />
       </ModalDialog>
