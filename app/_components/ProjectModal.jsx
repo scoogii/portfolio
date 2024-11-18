@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Modal } from "@mui/joy";
+import { Box, Button, Divider, Modal, ModalClose, ModalDialog } from "@mui/joy";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 import Link from "next/link";
@@ -35,9 +35,11 @@ const ProjectModal = ({
     overflowX: "hidden",
     overflowY: "auto",
     outline: "none",
+    color: "white",
+    font: "inherit",
   };
 
-  const gitButtonStyle = {
+  const linkStyle = {
     background: "transparent",
     ":hover": {
       bgcolor: "#e8e8e8",
@@ -55,7 +57,7 @@ const ProjectModal = ({
       }}
       sx={modalStyle}
     >
-      <Box sx={boxStyle}>
+      <ModalDialog sx={boxStyle}>
         <Box
           sx={{
             display: "flex",
@@ -63,28 +65,21 @@ const ProjectModal = ({
             justifyContent: "center",
             alignItems: "center",
             gap: "10px",
+            margin: "-5px",
           }}
         >
+          <ModalClose size="lg" />
+
           <h1>{name}</h1>
 
           {link.includes("github") && (
-            <Button
-              component={Link}
-              sx={gitButtonStyle}
-              href={link}
-              target="_blank"
-            >
+            <Button component={Link} sx={linkStyle} href={link} target="_blank">
               <GitHubIcon fontSize="large" />
             </Button>
           )}
 
           {link.includes("nbadle") && (
-            <Button
-              component={Link}
-              sx={gitButtonStyle}
-              href={link}
-              target="_blank"
-            >
+            <Button component={Link} sx={linkStyle} href={link} target="_blank">
               <SportsBasketballIcon fontSize="large" />
             </Button>
           )}
@@ -102,7 +97,7 @@ const ProjectModal = ({
             margin: "10px",
           }}
         />
-      </Box>
+      </ModalDialog>
     </Modal>
   );
 };
