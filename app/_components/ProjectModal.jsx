@@ -1,5 +1,6 @@
 import { Box, Button, Divider, Modal } from "@mui/joy";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 import Link from "next/link";
 
 const ProjectModal = ({
@@ -31,7 +32,9 @@ const ProjectModal = ({
     background: "#1a2438",
     border: "2px solid #2b3c5e",
     borderRadius: "12px",
-    overflow: "auto",
+    overflowX: "hidden",
+    overflowY: "auto",
+    outline: "none",
   };
 
   const gitButtonStyle = {
@@ -64,7 +67,7 @@ const ProjectModal = ({
         >
           <h1>{name}</h1>
 
-          {link !== "" && (
+          {link.includes("github") && (
             <Button
               component={Link}
               sx={gitButtonStyle}
@@ -72,6 +75,17 @@ const ProjectModal = ({
               target="_blank"
             >
               <GitHubIcon fontSize="large" />
+            </Button>
+          )}
+
+          {link.includes("nbadle") && (
+            <Button
+              component={Link}
+              sx={gitButtonStyle}
+              href={link}
+              target="_blank"
+            >
+              <SportsBasketballIcon fontSize="large" />
             </Button>
           )}
         </Box>
