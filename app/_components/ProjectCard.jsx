@@ -27,6 +27,7 @@ const ProjectCard = ({
     Java: "#f0931c",
     JUnit: "#c60000",
     pytest: "#08a2e4",
+    pandas: "#e70488",
   };
 
   const cardStyle = {
@@ -76,9 +77,9 @@ const ProjectCard = ({
         image={image}
         languages={languages}
         technologies={technologies}
-        description={description}
         longDescription={longDescription}
         link={link}
+        colours={colours}
       />
       <Button
         className={styles.projectBox}

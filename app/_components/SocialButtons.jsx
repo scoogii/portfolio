@@ -17,7 +17,7 @@ const SocialButtons = () => {
   const socialButtonStyle = {
     background: "#2b3c5e",
     ":hover": {
-      bgcolor: "#e8e8e8",
+      bgcolor: "#c7c5c5",
       color: "black",
       transform: "scale(1.1)",
     },
