@@ -1,3 +1,4 @@
+import styles from "../page.module.css";
 import { Box, Grid } from "@mui/joy";
 import Nav from "../_components/Nav";
 import ProjectCard from "../_components/ProjectCard";
@@ -55,14 +56,7 @@ const projects = [
 
 const Projects = () => {
   const bodyStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
     justifyContent: "start",
-    padding: "80px",
-    minHeight: "100vh",
-    height: "100vh",
-    gap: "20px",
   };
 
   const headingStyle = {
@@ -92,7 +86,7 @@ const Projects = () => {
 
   return (
     <>
-      <Box sx={bodyStyle}>
+      <main className={styles.main} sx={bodyStyle}>
         <Nav />
 
         <Box sx={headingStyle}>
@@ -113,7 +107,7 @@ const Projects = () => {
             />
           ))}
         </Grid>
-      </Box>
+      </main>
     </>
   );
 };

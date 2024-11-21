@@ -34,7 +34,7 @@ const Nav = () => {
         <HomeIcon />
       </Button>
       <Button sx={navButtonStyle} href="/projects" component={Link}>
-        My Projects
+        Projects
       </Button>
       <Button sx={navButtonStyle} href="/misc" component={Link}>
         Misc
