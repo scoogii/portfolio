@@ -3,6 +3,9 @@
 import { useMediaQuery } from "@mui/material";
 import Nav from "../_components/Nav";
 import { Box, Tab, TabList, TabPanel, Tabs } from "@mui/joy";
+import { Inconsolata } from "next/font/google";
+
+const inconsolata = Inconsolata({ subsets: ["latin"], display: "swap" });
 
 const Misc = () => {
   const smallScreen = useMediaQuery("(max-width: 600px)");
@@ -25,19 +28,32 @@ const Misc = () => {
   };
 
   const tabListStyle = {
+    display: "flex",
     gap: 0.5,
-    bgcolor: "#1c2230",
-    width: { xs: "100%", sm: "200px", lg: "250px" },
+    background: "#1b202e",
+    padding: "5px",
+    borderRight: smallScreen ? "none" : "2px solid #2b3c5e",
+    borderBottom: smallScreen ? "2px solid #2b3c5e" : "none",
     overflow: "auto",
     scrollSnapType: "x mandatory",
     "&::-webkit-scrollbar": { display: "none" },
+    font: "inherit",
   };
 
-  const tabStyle = {};
+  const tabStyle = {
+    display: { xs: "inline-block", md: "flex" },
+    textAlign: "center",
+    borderRadius: "12px",
+    minWidth: { xs: "140px", sm: "200px", lg: "250px" },
+    overflow: { xs: "hidden", md: "auto" },
+    whiteSpace: { xs: "nowrap", md: "normal" },
+    textOverflow: "ellipsis",
+  };
 
   const tabPanelStyle = {
     color: "white",
     background: "transparent",
+    font: "inherit",
   };
 
   return (
@@ -51,6 +67,7 @@ const Misc = () => {
           size={smallScreen ? "sm" : "md"}
           defaultValue={0}
           sx={tabWrapperStyle}
+          className={inconsolata.className}
         >
           <TabList disableUnderline sx={tabListStyle}>
             <Tab disableIndicator sx={tabStyle}>
@@ -59,18 +76,28 @@ const Misc = () => {
             <Tab disableIndicator sx={tabStyle}>
               Markdown to pdf converter
             </Tab>
+            <Tab disableIndicator sx={tabStyle}>
+              Download free games here
+            </Tab>
+            <Tab disableIndicator sx={tabStyle}>
+              Just testing tab overflow
+            </Tab>
           </TabList>
 
           <TabPanel value={0} sx={tabPanelStyle}>
-            <span style={{ font: "inherit" }}>This is tab pane one</span>
+            This is tab pane one
           </TabPanel>
 
           <TabPanel value={1} sx={tabPanelStyle}>
-            <span style={{ font: "inherit" }}>This is tab pane two</span>
+            This is tab pane two
           </TabPanel>
 
           <TabPanel value={2} sx={tabPanelStyle}>
             This is tab pane three
+          </TabPanel>
+
+          <TabPanel value={3} sx={tabPanelStyle}>
+            This is tab pane four
           </TabPanel>
         </Tabs>
       </Box>
