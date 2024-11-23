@@ -6,13 +6,15 @@ import { Inconsolata } from "next/font/google";
 const inconsolata = Inconsolata({ subsets: ["latin"], display: "swap" });
 
 const theme = extendTheme({
+  fontFamily: {
+    body: inconsolata,
+  },
   components: {
     JoyTab: {
       styleOverrides: {
         root: {
           color: "white",
           "&:hover": {
-            backgroundColor: "black",
             opacity: "0.8",
           },
           "&.Mui-selected": {
@@ -21,19 +23,6 @@ const theme = extendTheme({
         },
       },
     },
-    JoyTabList: {
-      styleOverrides: {
-        root: {},
-      },
-    },
-    JoyTabPanel: {
-      styleOverrides: {
-        root: {},
-      },
-    },
-  },
-  fontFamily: {
-    body: inconsolata,
   },
 });
 

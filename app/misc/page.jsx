@@ -65,16 +65,16 @@ const Misc = () => {
         >
           <TabList disableUnderline sx={tabListStyle}>
             <Tab disableIndicator sx={tabStyle}>
-              Flex Playground
+              Test 1
             </Tab>
             <Tab disableIndicator sx={tabStyle}>
-              Markdown to pdf converter
+              Test 2
             </Tab>
             <Tab disableIndicator sx={tabStyle}>
-              Download free games here
+              Test 3
             </Tab>
             <Tab disableIndicator sx={tabStyle}>
-              Just testing tab overflow
+              Test 4
             </Tab>
           </TabList>
 
