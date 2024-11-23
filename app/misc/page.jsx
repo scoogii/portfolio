@@ -22,8 +22,6 @@ const Misc = () => {
     width: "100%",
     height: "100%",
     background: "transparent",
-    ".JoyTabs-root": { color: "red" },
-    ".JoyTabs-root.selected": { color: "red" },
   };
 
   const tabListStyle = {
@@ -33,15 +31,9 @@ const Misc = () => {
     overflow: "auto",
     scrollSnapType: "x mandatory",
     "&::-webkit-scrollbar": { display: "none" },
-    ".JoyTabList-root": { color: "red" },
-    ".JoyTabList-root.selected": { color: "red" },
   };
 
-  const tabStyle = {
-    font: "inherit",
-    ".JoyTab-root": { color: "red" },
-    ".JoyTab-root.selected": { color: "red" },
-  };
+  const tabStyle = {};
 
   const tabPanelStyle = {
     color: "white",
@@ -56,7 +48,7 @@ const Misc = () => {
         <Tabs
           aria-label="tabs"
           orientation={smallScreen ? "horizontal" : "vertical"}
-          size={smallScreen ? "sm" : "lg"}
+          size={smallScreen ? "sm" : "md"}
           defaultValue={0}
           sx={tabWrapperStyle}
         >
