@@ -1,4 +1,5 @@
-import { createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/joy";
+import theme from "./theme";
 import "./globals.css";
 import { Inconsolata } from "next/font/google";
 
@@ -11,8 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inconsolata.className}>
-      <body>{children}</body>
-    </html>
+    <ThemeProvider theme={theme}>
+      <html lang="en" className={inconsolata.className}>
+        <body>{children}</body>
+      </html>
+    </ThemeProvider>
   );
 }

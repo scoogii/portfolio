@@ -3,9 +3,6 @@
 import { useMediaQuery } from "@mui/material";
 import Nav from "../_components/Nav";
 import { Box, Tab, TabList, TabPanel, Tabs } from "@mui/joy";
-import { Inconsolata } from "next/font/google";
-
-const inconsolata = Inconsolata({ subsets: ["latin"], display: "swap" });
 
 const Misc = () => {
   const smallScreen = useMediaQuery("(max-width: 600px)");
@@ -37,7 +34,6 @@ const Misc = () => {
     overflow: "auto",
     scrollSnapType: "x mandatory",
     "&::-webkit-scrollbar": { display: "none" },
-    font: "inherit",
   };
 
   const tabStyle = {
@@ -53,7 +49,6 @@ const Misc = () => {
   const tabPanelStyle = {
     color: "white",
     background: "transparent",
-    font: "inherit",
   };
 
   return (
@@ -67,7 +62,6 @@ const Misc = () => {
           size={smallScreen ? "sm" : "md"}
           defaultValue={0}
           sx={tabWrapperStyle}
-          className={inconsolata.className}
         >
           <TabList disableUnderline sx={tabListStyle}>
             <Tab disableIndicator sx={tabStyle}>
