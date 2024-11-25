@@ -3,6 +3,7 @@
 import { useMediaQuery } from "@mui/material";
 import Nav from "../_components/Nav";
 import { Box, Tab, TabList, TabPanel, Tabs } from "@mui/joy";
+import FlexPlaygroundPanel from "../_components/FlexPlaygroundPanel";
 
 const Misc = () => {
   const smallScreen = useMediaQuery("(max-width: 600px)");
@@ -65,33 +66,20 @@ const Misc = () => {
         >
           <TabList disableUnderline sx={tabListStyle}>
             <Tab disableIndicator sx={tabStyle}>
-              Test 1
+              Flex Playground
             </Tab>
+
             <Tab disableIndicator sx={tabStyle}>
-              Test 2
-            </Tab>
-            <Tab disableIndicator sx={tabStyle}>
-              Test 3
-            </Tab>
-            <Tab disableIndicator sx={tabStyle}>
-              Test 4
+              Markdown to PDF
             </Tab>
           </TabList>
 
           <TabPanel value={0} sx={tabPanelStyle}>
-            This is tab pane one
+            <FlexPlaygroundPanel />
           </TabPanel>
 
           <TabPanel value={1} sx={tabPanelStyle}>
-            This is tab pane two
-          </TabPanel>
-
-          <TabPanel value={2} sx={tabPanelStyle}>
-            This is tab pane three
-          </TabPanel>
-
-          <TabPanel value={3} sx={tabPanelStyle}>
-            This is tab pane four
+            WIP
           </TabPanel>
         </Tabs>
       </Box>

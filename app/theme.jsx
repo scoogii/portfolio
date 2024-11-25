@@ -15,7 +15,7 @@ const theme = extendTheme({
         root: {
           color: "white",
           "&:hover": {
-            opacity: "0.8",
+            opacity: "0.7",
           },
           "&.Mui-selected": {
             backgroundColor: "#2b3c5e",
