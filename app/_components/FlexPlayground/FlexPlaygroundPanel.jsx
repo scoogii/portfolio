@@ -13,6 +13,8 @@ const FlexPlaygroundPanel = () => {
     alignItems: "center",
     width: "100%",
     height: "100%",
+    overflowY: "auto",
+    overflowX: "hidden",
   };
 
   const contentStyle = {
@@ -20,7 +22,6 @@ const FlexPlaygroundPanel = () => {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    width: "100%",
     border: "1px solid #2b3c5e",
     borderRadius: "14px",
     padding: "20px 10px 20px",
@@ -59,15 +60,19 @@ const FlexPlaygroundPanel = () => {
           headingStyle={subHeadingStyle}
           groupStyle={radioGroupStyle}
         />
+
         <FlexWrap headingStyle={subHeadingStyle} groupStyle={radioGroupStyle} />
+
         <JustifyContent
           headingStyle={subHeadingStyle}
           groupStyle={radioGroupStyle}
         />
+
         <AlignItems
           headingStyle={subHeadingStyle}
           groupStyle={radioGroupStyle}
         />
+
         <AlignContent
           headingStyle={subHeadingStyle}
           groupStyle={radioGroupStyle}

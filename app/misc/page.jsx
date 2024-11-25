@@ -7,7 +7,7 @@ import FlexPlaygroundPanel from "../_components/FlexPlayground/FlexPlaygroundPan
 import MarkdownToPDFPanel from "../_components/MarkdownToPDF/MarkdownToPDFPanel";
 
 const Misc = () => {
-  const smallScreen = useMediaQuery("(max-width: 600px)");
+  const smallScreen = useMediaQuery("(max-width: 900px)");
 
   const bodyStyle = {
     display: "flex",
@@ -31,6 +31,7 @@ const Misc = () => {
     gap: 0.5,
     background: "#1b202e",
     padding: "5px",
+    minWidth: { xs: "150px", sm: "210px", lg: "260px" },
     borderRight: smallScreen ? "none" : "2px solid #2b3c5e",
     borderBottom: smallScreen ? "2px solid #2b3c5e" : "none",
     overflow: "auto",
@@ -49,6 +50,7 @@ const Misc = () => {
   };
 
   const tabPanelStyle = {
+    height: { xs: "0", md: "100%" },
     color: "white",
     background: "transparent",
   };
