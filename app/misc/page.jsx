@@ -3,7 +3,8 @@
 import { useMediaQuery } from "@mui/material";
 import Nav from "../_components/Nav";
 import { Box, Tab, TabList, TabPanel, Tabs } from "@mui/joy";
-import FlexPlaygroundPanel from "../_components/FlexPlaygroundPanel";
+import FlexPlaygroundPanel from "../_components/FlexPlayground/FlexPlaygroundPanel";
+import MarkdownToPDFPanel from "../_components/MarkdownToPDF/MarkdownToPDFPanel";
 
 const Misc = () => {
   const smallScreen = useMediaQuery("(max-width: 600px)");
@@ -79,7 +80,7 @@ const Misc = () => {
           </TabPanel>
 
           <TabPanel value={1} sx={tabPanelStyle}>
-            WIP
+            <MarkdownToPDFPanel />
           </TabPanel>
         </Tabs>
       </Box>
