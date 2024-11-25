@@ -27,7 +27,7 @@ const Nav = () => {
       transform: "scale(1.1)",
     },
     font: "inherit",
-    display: { xs: "none", sm: "auto" },
+    display: { xs: "none", sm: "flex" },
   };
 
   const menuButtonStyle = {
@@ -35,6 +35,7 @@ const Nav = () => {
     ":hover": {
       background: "#354a75",
     },
+    display: { xs: "flex", sm: "none" },
   };
 
   const menuStyle = {
@@ -64,13 +65,13 @@ const Nav = () => {
         </MenuButton>
 
         <Menu variant="plain" sx={menuStyle}>
-          <MenuItem sx={menuItemStyle} href="/">
+          <MenuItem sx={menuItemStyle} component={Link} href="/">
             Home
           </MenuItem>
-          <MenuItem sx={menuItemStyle} href="/projects">
+          <MenuItem sx={menuItemStyle} component={Link} href="/projects">
             Projects
           </MenuItem>
-          <MenuItem sx={menuItemStyle} href="/misc">
+          <MenuItem sx={menuItemStyle} component={Link} href="/misc">
             Misc
           </MenuItem>
         </Menu>
