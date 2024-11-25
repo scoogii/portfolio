@@ -9,13 +9,26 @@ const FlexWrap = ({ headingStyle, groupStyle }) => {
         orientation="horizontal"
         sx={groupStyle}
       >
-        <Radio value="nowrap" label="nowrap" size="sm" color="neutral" />
-        <Radio value="wrap" label="wrap" size="sm" color="neutral" />
+        <Radio
+          value="nowrap"
+          label="nowrap"
+          size="sm"
+          color="neutral"
+          variant="solid"
+        />
+        <Radio
+          value="wrap"
+          label="wrap"
+          size="sm"
+          color="neutral"
+          variant="solid"
+        />
         <Radio
           value="wrap-reverse"
           label="wrap-reverse"
           size="sm"
           color="neutral"
+          variant="solid"
         />
       </RadioGroup>
     </>
