@@ -11,7 +11,7 @@ const FlexDirection = ({ headingStyle, groupStyle }) => {
 
   const containerStyle = {
     display: "flex",
-    flexDirection: !option ? "row" : option,
+    flexDirection: option,
     justifyContent: "center",
     alignItems: "center",
     width: "90%",
@@ -27,9 +27,12 @@ const FlexDirection = ({ headingStyle, groupStyle }) => {
     <>
       <h3 style={headingStyle}>flex-direction</h3>
       <RadioGroup
-        defaultValue={option}
+        value={option}
         orientation="horizontal"
         sx={groupStyle}
+        onChange={(e) => {
+          handleChange(e);
+        }}
       >
         <Radio
           value="row"
@@ -37,9 +40,6 @@ const FlexDirection = ({ headingStyle, groupStyle }) => {
           size="sm"
           color="neutral"
           variant="solid"
-          onChange={(e) => {
-            handleChange(e);
-          }}
         />
         <Radio
           value="row-reverse"
@@ -47,9 +47,6 @@ const FlexDirection = ({ headingStyle, groupStyle }) => {
           size="sm"
           color="neutral"
           variant="solid"
-          onChange={(e) => {
-            handleChange(e);
-          }}
         />
         <Radio
           value="column"
@@ -57,9 +54,6 @@ const FlexDirection = ({ headingStyle, groupStyle }) => {
           size="sm"
           color="neutral"
           variant="solid"
-          onChange={(e) => {
-            handleChange(e);
-          }}
         />
         <Radio
           value="column-reverse"
@@ -67,18 +61,15 @@ const FlexDirection = ({ headingStyle, groupStyle }) => {
           size="sm"
           color="neutral"
           variant="solid"
-          onChange={(e) => {
-            handleChange(e);
-          }}
         />
       </RadioGroup>
 
       <Box sx={containerStyle}>
-        <SampleBox id="1" colour="#eb4034" />
-        <SampleBox id="2" colour="#4c60e0" />
-        <SampleBox id="3" colour="#5ccf4a" />
-        <SampleBox id="4" colour="#f5a35b" />
-        <SampleBox id="5" colour="#eb6edc" />
+        <SampleBox id="1" colour="#eb4034" option={option} />
+        <SampleBox id="2" colour="#4c60e0" option={option} />
+        <SampleBox id="3" colour="#5ccf4a" option={option} />
+        <SampleBox id="4" colour="#f5a35b" option={option} />
+        <SampleBox id="5" colour="#eb6edc" option={option} />
       </Box>
     </>
   );
