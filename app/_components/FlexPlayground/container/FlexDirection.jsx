@@ -65,11 +65,46 @@ const FlexDirection = ({ headingStyle, groupStyle }) => {
       </RadioGroup>
 
       <Box sx={containerStyle}>
-        <SampleBox id="1" colour="#eb4034" option={option} />
-        <SampleBox id="2" colour="#4c60e0" option={option} />
-        <SampleBox id="3" colour="#5ccf4a" option={option} />
-        <SampleBox id="4" colour="#f5a35b" option={option} />
-        <SampleBox id="5" colour="#eb6edc" option={option} />
+        <SampleBox
+          id="1"
+          colour="#eb4034"
+          option={option}
+          min="20%"
+          max="100%"
+          height="100%"
+        />
+        <SampleBox
+          id="2"
+          colour="#4c60e0"
+          option={option}
+          min="20%"
+          max="100%"
+          height="100%"
+        />
+        <SampleBox
+          id="3"
+          colour="#5ccf4a"
+          option={option}
+          min="20%"
+          max="100%"
+          height="100%"
+        />
+        <SampleBox
+          id="4"
+          colour="#f5a35b"
+          option={option}
+          min="20%"
+          max="100%"
+          height="100%"
+        />
+        <SampleBox
+          id="5"
+          colour="#eb6edc"
+          option={option}
+          min="20%"
+          max="100%"
+          height="100%"
+        />
       </Box>
     </>
   );

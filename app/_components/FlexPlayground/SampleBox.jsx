@@ -1,13 +1,13 @@
 import { Box } from "@mui/joy";
 
-const SampleBox = ({ id, colour, option }) => {
+const SampleBox = ({ id, colour, option, min, max, height }) => {
   const boxStyle = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    width: option.includes("row") ? "15%" : "100%",
-    height: "100%",
+    width: option.includes("row") ? min : max,
+    height: height,
     background: colour,
     borderRadius: "12px",
   };
