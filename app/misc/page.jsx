@@ -53,6 +53,7 @@ const Misc = () => {
     height: { xs: "0", md: "100%" },
     color: "white",
     background: "transparent",
+    padding: "0px",
   };
 
   return (

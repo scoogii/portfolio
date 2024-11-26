@@ -25,6 +25,9 @@ const theme = extendTheme({
         root: {
           color: "white",
           fontSize: "12pt",
+          "&.Mui-checked": {
+            fontWeight: "bold",
+          },
         },
       },
     },

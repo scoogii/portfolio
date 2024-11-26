@@ -11,8 +11,9 @@ const AlignContent = ({ headingStyle, groupStyle }) => {
 
   const containerStyle = {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "center",
+    flexWrap: "wrap",
     alignContent: option,
     width: "90%",
     minHeight: "200px",
