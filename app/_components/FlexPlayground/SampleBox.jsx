@@ -8,6 +8,7 @@ const SampleBox = ({ id, colour, option, min, max, height }) => {
     alignItems: "center",
     width: option.includes("row") ? min : max,
     height: height,
+    minHeight: option === "stretch" ? "100%" : "0",
     background: colour,
     borderRadius: "12px",
   };

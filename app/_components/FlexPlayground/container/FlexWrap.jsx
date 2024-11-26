@@ -65,7 +65,7 @@ const FlexWrap = ({ headingStyle, groupStyle }) => {
           option={option}
           min="30%"
           max="30%"
-          height="40%"
+          height={option === "nowrap" ? "100%" : "40%"}
         />
         <SampleBox
           id="2"
@@ -73,7 +73,7 @@ const FlexWrap = ({ headingStyle, groupStyle }) => {
           option={option}
           min="30%"
           max="30%"
-          height="40%"
+          height={option === "nowrap" ? "100%" : "40%"}
         />
         <SampleBox
           id="3"
@@ -81,7 +81,7 @@ const FlexWrap = ({ headingStyle, groupStyle }) => {
           option={option}
           min="30%"
           max="30%"
-          height="40%"
+          height={option === "nowrap" ? "100%" : "40%"}
         />
         <SampleBox
           id="4"
@@ -89,7 +89,7 @@ const FlexWrap = ({ headingStyle, groupStyle }) => {
           option={option}
           min="30%"
           max="30%"
-          height="40%"
+          height={option === "nowrap" ? "100%" : "40%"}
         />
         <SampleBox
           id="5"
@@ -97,7 +97,7 @@ const FlexWrap = ({ headingStyle, groupStyle }) => {
           option={option}
           min="30%"
           max="30%"
-          height="40%"
+          height={option === "nowrap" ? "100%" : "40%"}
         />
       </Box>
     </>

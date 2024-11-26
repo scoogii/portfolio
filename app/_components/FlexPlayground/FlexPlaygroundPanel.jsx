@@ -47,6 +47,7 @@ const FlexPlaygroundPanel = () => {
     alignItems: "center",
     flexWrap: "wrap",
     gap: "10px",
+    marginBottom: "10px",
   };
 
   return (
