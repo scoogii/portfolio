@@ -27,6 +27,7 @@ const FlexPlaygroundPanel = () => {
     borderRadius: "14px",
     padding: "20px 10px 20px",
     gap: "10px",
+    marginBottom: "20px",
   };
 
   const headingStyle = {
