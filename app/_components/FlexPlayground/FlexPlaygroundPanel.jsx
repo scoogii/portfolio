@@ -22,6 +22,7 @@ const FlexPlaygroundPanel = () => {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    width: "90%",
     border: "1px solid #2b3c5e",
     borderRadius: "14px",
     padding: "20px 10px 20px",
