@@ -4,6 +4,7 @@ import FlexWrap from "./container/FlexWrap";
 import JustifyContent from "./container/JustifyContent";
 import AlignItems from "./container/AlignItems";
 import AlignContent from "./container/AlignContent";
+import AlignSelf from "./items/AlignSelf";
 
 const FlexPlaygroundPanel = () => {
   const boxStyle = {
@@ -84,18 +85,10 @@ const FlexPlaygroundPanel = () => {
 
       <h2 style={headingStyle}>Flex Items</h2>
       <Box sx={contentStyle}>
-        <h1>WIP 🚧</h1>
-        {/*
-        <h3 style={subHeadingStyle}>align-self</h3>
-
-        <h3 style={subHeadingStyle}>flex-grow</h3>
-
-        <h3 style={subHeadingStyle}>flex-shrink</h3>
-
-        <h3 style={subHeadingStyle}>flex</h3>
-
-        <h3 style={subHeadingStyle}>order</h3>
-      */}
+        <AlignSelf
+          headingStyle={subHeadingStyle}
+          groupStyle={radioGroupStyle}
+        />
       </Box>
     </Box>
   );
