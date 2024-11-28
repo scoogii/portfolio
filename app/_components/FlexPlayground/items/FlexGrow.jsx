@@ -50,7 +50,7 @@ const FlexGrow = ({ headingStyle, groupStyle }) => {
             defaultValue={option1["flexGrow"]}
             slotProps={{
               input: {
-                min: 1,
+                min: 0,
                 step: 1,
               },
             }}
@@ -68,7 +68,7 @@ const FlexGrow = ({ headingStyle, groupStyle }) => {
             defaultValue={option2["flexGrow"]}
             slotProps={{
               input: {
-                min: 1,
+                min: 0,
                 step: 1,
               },
             }}
@@ -86,7 +86,7 @@ const FlexGrow = ({ headingStyle, groupStyle }) => {
             defaultValue={option3["flexGrow"]}
             slotProps={{
               input: {
-                min: 1,
+                min: 0,
                 step: 1,
               },
             }}
@@ -104,7 +104,7 @@ const FlexGrow = ({ headingStyle, groupStyle }) => {
             defaultValue={option4["flexGrow"]}
             slotProps={{
               input: {
-                min: 1,
+                min: 0,
                 step: 1,
               },
             }}
@@ -122,7 +122,7 @@ const FlexGrow = ({ headingStyle, groupStyle }) => {
             defaultValue={option5["flexGrow"]}
             slotProps={{
               input: {
-                min: 1,
+                min: 0,
                 step: 1,
               },
             }}
