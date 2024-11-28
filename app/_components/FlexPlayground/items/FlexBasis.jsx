@@ -12,7 +12,7 @@ const FlexBasis = ({ headingStyle, groupStyle }) => {
     justifyContent: "center",
     alignItems: "center",
     width: "90%",
-    minHeight: "200px",
+    minHeight: "100px",
     border: "1px solid #2b3c5e",
     borderRadius: "12px",
     padding: "10px",

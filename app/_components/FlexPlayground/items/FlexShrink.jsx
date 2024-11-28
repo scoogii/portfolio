@@ -15,7 +15,7 @@ const FlexShrink = ({ headingStyle, groupStyle }) => {
     justifyContent: "center",
     alignItems: "center",
     width: "90%",
-    minHeight: "200px",
+    minHeight: "100px",
     border: "1px solid #2b3c5e",
     borderRadius: "12px",
     padding: "10px",
@@ -40,7 +40,7 @@ const FlexShrink = ({ headingStyle, groupStyle }) => {
 
   return (
     <>
-      <h3 style={headingStyle}>flex-basis</h3>
+      <h3 style={headingStyle}>flex-shrink</h3>
 
       <Box sx={groupStyle} style={{ gap: "20px" }}>
         <Box sx={optionContainerStyle}>
