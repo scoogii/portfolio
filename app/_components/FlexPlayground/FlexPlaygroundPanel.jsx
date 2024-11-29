@@ -8,6 +8,7 @@ import AlignSelf from "./items/AlignSelf";
 import FlexGrow from "./items/FlexGrow";
 import FlexShrink from "./items/FlexShrink";
 import FlexBasis from "./items/FlexBasis";
+import Order from "./items/Order";
 
 const FlexPlaygroundPanel = () => {
   const boxStyle = {
@@ -104,6 +105,8 @@ const FlexPlaygroundPanel = () => {
           headingStyle={subHeadingStyle}
           groupStyle={radioGroupStyle}
         />
+
+        <Order headingStyle={subHeadingStyle} groupStyle={radioGroupStyle} />
       </Box>
     </Box>
   );
