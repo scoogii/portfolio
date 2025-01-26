@@ -50,12 +50,11 @@ const ProjectModal = ({
   const linkStyle = {
     background: "transparent",
     ":hover": {
-      bgcolor: "#c7c5c5",
-      color: "black",
-      transform: "scale(1.05)",
+      bgcolor: "transparent",
+      color: "#2b3c5e",
+      transform: "scale(1.2)",
     },
-    width: "50px",
-    height: "20px",
+    marginLeft: "-10px",
   };
 
   const contentStyle = {
@@ -122,13 +121,13 @@ const ProjectModal = ({
 
           {link.includes("github") && (
             <Button component={Link} sx={linkStyle} href={link} target="_blank">
-              <GitHubIcon fontSize="large" />
+              <GitHubIcon style={{ fontSize: "20pt" }} />
             </Button>
           )}
 
           {link.includes("nbadle") && (
             <Button component={Link} sx={linkStyle} href={link} target="_blank">
-              <SportsBasketballIcon fontSize="large" />
+              <SportsBasketballIcon style={{ fontSize: "20pt" }} />
             </Button>
           )}
         </Box>
