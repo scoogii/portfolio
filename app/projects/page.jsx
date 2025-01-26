@@ -5,6 +5,19 @@ import ProjectCard from "../_components/ProjectCard";
 
 const projects = [
   {
+    name: "TOTD",
+    languages: ["JavaScript"],
+    technologies: ["React Native", "Expo", "ExpressJS", "SQLite"],
+    description:
+      "Mobile app for noting thought(s) throughout the day stored in calendar.",
+    longDescription: `
+This was my first time trying out mobile development and I wanted to create something I believe could be useful for a large number of people. Given that our mobile phones provide us with an immense level of convenience, I aimed at making an app that would leverage this idea. Like many other people, sometimes we forget things because we say that we will remember but don't end up doing so. As such, I developed a convenient thought-taking app that logs your daily thoughts and stores it in a calendar where you can view all your previous thoughts. This will allow users to recall moments from each day as well as recall actionables that they have listed.
+
+I completed this project with the help of Expo which made the React Native development experience extremely smooth, as well as developing the backend using ExpressJS and SQLite for a lightweight and fast service. With the consideration of scaling, I may consider transitioning to PostgreSQL to manage an increase in traffic.
+`,
+    link: "https://github.com/scoogii/TOTD",
+  },
+  {
     name: "NBAdle",
     languages: ["Python", "JavaScript"],
     technologies: ["NextJS", "Flask", "pandas"],

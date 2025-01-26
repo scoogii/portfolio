@@ -21,6 +21,10 @@ const ProjectCard = ({
     JavaScript: "#f7e018",
     NextJS: "#2a53a9",
     ReactJS: "#58c4dc",
+    "React Native": "#61dafb",
+    Expo: "#edeef0",
+    ExpressJS: "#8cc141",
+    SQLite: "#238cd2",
     Flask: "#4cb1c3",
     PostgreSQL: "#336791",
     Docker: "#1d63ed",
@@ -123,6 +127,7 @@ const ProjectCard = ({
                       bgcolor: colours[tech],
                       color: "#161717",
                       font: "inherit",
+                      textAlign: "center",
                     }}
                   >
                     {tech}
@@ -138,6 +143,7 @@ const ProjectCard = ({
                       bgcolor: colours[tech],
                       color: "#161717",
                       font: "inherit",
+                      textAlign: "center",
                     }}
                   >
                     {tech}
@@ -164,6 +170,7 @@ const ProjectCard = ({
                     bgcolor: colours[tech],
                     color: "#161717",
                     font: "inherit",
+                    textAlign: "center",
                   }}
                 >
                   {tech}
